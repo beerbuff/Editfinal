@@ -32,14 +32,20 @@ export class QrScanPage {
   data: Observable<any>;
   val : any;
 
+
   dateFormat = require('dateformat');
   date = this.dateFormat(new Date(), "yyyy-mm-dd");
   time = this.dateFormat(new Date(), "HH:MM:ss");
+
+  
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
              public http: HttpClient, private barcodeScanner: BarcodeScanner) {
     this.loadstudentcheckData();
+   
+
+
   }
 
   ionViewDidLoad() {

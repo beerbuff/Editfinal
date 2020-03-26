@@ -21,7 +21,7 @@ export class BmiviewPage {
   qrId='';
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public http:HttpClient,private storage: Storage) {
-    this.loadbmiData();
+    // this.loadbmiData();
     this.loadstudentData();
 
   }
@@ -30,18 +30,18 @@ export class BmiviewPage {
     console.log('ionViewDidLoad BmiviewPage');
   }
 
-  loadbmiData(){
-    this.storage.get('qrId').then((val) => {
-      // console.log(val);
-      let url = "http://192.168.43.75/servicephp/getbmi.php?qrId="+val;
-      this.http.get(url).subscribe((data: any) => {
-        this.rowsArray = data.bmi;
+  // loadbmiData(){
+  //   this.storage.get('qrId').then((val) => {
+  //     // console.log(val);
+  //     let url = "http://192.168.43.75/servicephp/getbmi.php?qrId="+val;
+  //     this.http.get(url).subscribe((data: any) => {
+  //       this.rowsArray = data.bmi;
       
-         console.log(data);
+  //        console.log(data);
         
-      }, (error) => { console.log(error) });
-    })
-  }
+  //     }, (error) => { console.log(error) });
+  //   })
+  // }
 
 
   loadstudentData(){

@@ -9,7 +9,7 @@
   <ion-item>
     <ion-label>เลือกนักเรียน</ion-label>
     <ion-select multiple="true" (ionChange)="show($event)">
-      <ion-option *ngFor="let item of student ; let i = index" value="{{item.card_id}}">{{item.student_name}}{{item.student_surname}}</ion-option>
+      <ion-option *ngFor="let item of student ; let i = index" value="{{item.card_id}}">{{item.student_title}}{{item.student_name}} {{item.student_surname}}</ion-option>
     </ion-select>
   </ion-item>
 

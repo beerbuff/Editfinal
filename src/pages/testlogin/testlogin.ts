@@ -38,15 +38,15 @@ export class TestloginPage {
 
     this.data.subscribe(data => {
 
-      console.log(data);
+      // console.log(data);
       this.storage.set('card_id', data.card_id);
-      this.storage.get('card_id').then((val) => {
-        console.log('card_id is', val);
+      this.storage.get('card_id').then((val1) => {
+        console.log('card_id is', val1);
       })
 
       this.storage.set('qrId', data.qrId);
-      this.storage.get('qrId').then((val) => {
-        console.log('qrId is', val);
+      this.storage.get('qrId').then((val2) => {
+        console.log('qrId is', val2);
       })
 
 
